@@ -15,3 +15,17 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 "# Flutter-REST-API" 
+
+### What is Server and Client?
+
+- A server is a computer or system that provides resources, data, services, or progrmas to other computers, known as clients, over a network.
+
+- Google
+- Food Panda
+- FaceBook
+- WhatsApp
+
+### what are APIs?
+
+- API application programming interface
+- Allow communication between client and server
