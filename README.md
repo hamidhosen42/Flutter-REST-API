@@ -1,24 +1,6 @@
-# flutter_rest_api
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Flutter-REST-API" 
-
 ### What is Server and Client?
 
-- A server is a computer or system that provides resources, data, services, or progrmas to other computers, known as clients, over a network.
+- A server is a computer or system that provides resources, data, services, or programs to other computers, known as clients, over a network.
 
 - Google
 - Food Panda
@@ -29,3 +11,16 @@ samples, guidance on mobile development, and a full API reference.
 
 - API application programming interface
 - Allow communication between client and server
+
+### What are REST APIs?
+
+- The representation state transfer (REST) architecture is perhaps the most populer approach to build APIs.
+- REST relies on a client/server approach which separates front and back ends of the API
+
+### USing HHTP Methods for RESTfil Services
+
+- GET
+- POST
+- UPDATE
+- PUT
+- DELETE
