@@ -17,10 +17,39 @@
 - The representation state transfer (REST) architecture is perhaps the most populer approach to build APIs.
 - REST relies on a client/server approach which separates front and back ends of the API
 
-### USing HHTP Methods for RESTfil Services
+### USing HHTP Methods for RESTful Services
 
 - GET
 - POST
 - UPDATE
 - PUT
 - DELETE
+
+### How to create APIs? (Technologies used to build API's)
+
+- Node.Js
+- Laravel
+
+## =========== JSON STRUCTURE =============
+
+- JSON stands for JavaScript Object Notation
+- JSON is a lightweight data-interchange format
+- JSON is plain text written in JavaScript object notation
+- JSON is used to send data between computers
+- JSON is language independent \*
+
+### JSON Values :
+
+- a string
+- a number
+- an object
+- an array
+- a boolean
+- null
+
+### JSON STRUCTURE
+
+```
+"name":"Hamid Hosen",
+"ID":"2323
+```
