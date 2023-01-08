@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                 } else {
                   return ListView.builder(
                     itemCount: photosList.length,
-                    itemBuilder: (context, index) {
+                    itemBuilder: (context, index) { 
                       return ListTile(
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(
