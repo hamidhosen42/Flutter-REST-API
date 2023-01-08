@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:flutter_rest_api/Home/home_screen.dart';
+import 'package:flutter_rest_api/Home/home_screen1.dart';
+import 'package:flutter_rest_api/Home/home_screen2.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple
       ),
-      home: HomeScreen(),
+      // home: HomeScreen1(),
+      home: HomeScreen2(),
     );
   }
 }

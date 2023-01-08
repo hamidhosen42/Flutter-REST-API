@@ -91,6 +91,18 @@ class _HomeScreenState extends State<HomeScreen> {
         postList.add(PostsModel.fromJson(i));
       }
 
+      ///-------------- or -----------
+
+      <!-- for (var i in data) {
+        Photos photos = Photos(
+            albumId: i['albumId'],
+            id: i['id'],
+            title:i['title'],
+            url: i['url'],
+            thumbnailUrl: i['thumbnailUrl']);
+        photosList.add(photos);
+      } -->
+
       return postList;
     } else {
       return postList;

@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rest_api/Models/post_model.dart';
 import 'package:http/http.dart' as http;
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreen1 extends StatefulWidget {
+  const HomeScreen1({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen1> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen1> {
   List<PostsModel> postList = [];
 
   Future<List<PostsModel>> getPostApi() async {
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Center(child: CircularProgressIndicator());
                 } else {
                   return ListView.builder(
-                    shrinkWrap: true, //! must be writen-----------
+                    // shrinkWrap: true, //! must be writen-----------
                     itemCount: postList.length,
                     itemBuilder: (context, index) {
                       return Card(
