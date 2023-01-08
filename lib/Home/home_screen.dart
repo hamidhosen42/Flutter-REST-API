@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages, unused_local_variable, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages, unused_local_variable, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings
 
 import 'dart:convert';
 
@@ -22,6 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
     var data = jsonDecode(response.body.toString());
 
     if (response.statusCode == 200) {
+      postList.clear();
+
       for (var i in data) {
         postList.add(PostsModel.fromJson(i));
       }
@@ -54,7 +56,38 @@ class _HomeScreenState extends State<HomeScreen> {
                     shrinkWrap: true, //! must be writen-----------
                     itemCount: postList.length,
                     itemBuilder: (context, index) {
-                      return Text(index.toString());
+                      return Card(
+                        color: Colors.grey[200],
+                        shadowColor: Colors.deepOrange,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Text(
+                              //   "ID:",
+                              //   style: TextStyle(fontWeight: FontWeight.bold),
+                              // ),
+                              // Text(postList[index].id.toString()),
+                              // Text("UserID:" +
+                              //     postList[index].userId.toString()),
+                              Text(
+                                "Title",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text(postList[index].title.toString(),
+                                  textAlign: TextAlign.justify),
+                              Text(
+                                "Body",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text("Body:" + postList[index].body.toString(),
+                                  textAlign: TextAlign.justify),
+                            ],
+                          ),
+                        ),
+                      );
                     },
                   );
                 }
