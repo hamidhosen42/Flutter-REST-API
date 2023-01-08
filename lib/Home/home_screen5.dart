@@ -1,5 +1,10 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// ignore_for_file: unused_local_variable, prefer_const_constructors
+
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_rest_api/Models/products_model.dart';
+import 'package:http/http.dart' as http;
 
 class HomeScreen5 extends StatefulWidget {
   const HomeScreen5({super.key});
@@ -9,9 +14,22 @@ class HomeScreen5 extends StatefulWidget {
 }
 
 class _HomeScreen5State extends State<HomeScreen5> {
+  Future<ProductsModel> getProductsApi() async {
+    final response = await http.get(Uri.parse(
+        "https://api.github.com/repos/tidyverse/ggplot2/git/trees/8b7cc0748882d10c9335a725520e0f72c4538cba"));
+
+    var data = jsonDecode(response.body.toString());
+
+    if (response.statusCode == 200) {
+      return ProductsModel.fromJson(data);
+    } else {
+      return ProductsModel.fromJson(data);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    returnScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text("Rest APi"),
         centerTitle: true,
@@ -21,43 +39,22 @@ class _HomeScreen5State extends State<HomeScreen5> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            child: FutureBuilder(
-              future: getUserApi(),
+            child: FutureBuilder<ProductsModel>(
+              future: getProductsApi(),
               builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
+                if (!snapshot.hasData) {
                   return Center(child: CircularProgressIndicator());
                 } else {
                   return ListView.builder(
-                    itemCount: data.length,
+                    // itemCount: snapshot.data!.data!.length,
                     itemBuilder: (context, index) {
-                      return Card(
-                        child: Column(
-                          children: [
-                            ReusbaleRow(
-                              title: 'Name',
-                              value: data[index]['name'].toString(),
-                            ),
-                            ReusbaleRow(
-                              title: 'Username',
-                              value: data[index]['username'].toString(),
-                            ),
-                            ReusbaleRow(
-                              title: 'Address',
-                              value:
-                                  data[index]['address']['street'].toString(),
-                            ),
-                            ReusbaleRow(
-                              title: 'Lat',
-                              value: data[index]['address']['geo']['lat']
-                                  .toString(),
-                            ),
-                            ReusbaleRow(
-                              title: 'Lat',
-                              value: data[index]['address']['geo']['lng']
-                                  .toString(),
-                            ),
-                          ],
-                        ),
+                      return Column(
+                        children: [
+                          ListTile(
+                              title: Text(snapshot.data!.sha.toString()),
+                              subtitle: Text(
+                                  snapshot.data!.tree![index].path.toString())),
+                        ],
                       );
                     },
                   );
