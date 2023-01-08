@@ -7,6 +7,7 @@ import 'package:flutter_rest_api/Get_API/home_screen4.dart';
 import 'package:flutter_rest_api/Get_API/home_screen5.dart';
 import 'package:flutter_rest_api/POST_API/login.dart';
 import 'package:flutter_rest_api/POST_API/sign_up.dart';
+import 'package:flutter_rest_api/POST_API/upload_image.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
       // home: HomeScreen4(),
       // home: HomeScreen5(),
       // home: SignUpScreen(),
-      home: SignInScreen(),
+      // home: SignInScreen(),
+      home: UploadImageScreen(),
     );
   }
 }
