@@ -1,6 +1,10 @@
 ### Important Link :
-
 - [Fake Store API](https://fakestoreapi.com/)
+- [Test your front-end against a real API](https://reqres.in/)
+- [JSON-VIEWeR](http://jsonviewer.stack.hu/)
+- [http: ^0.13.5](https://pub.dev/packages/http)
+- [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
+- [Fetch data from the internet](https://docs.flutter.dev/cookbook/networking/fetch-data)
 
 ### What is Server and Client?
 
