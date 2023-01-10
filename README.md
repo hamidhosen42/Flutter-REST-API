@@ -1,3 +1,7 @@
+### Important Link :
+
+- [Fake Store API](https://fakestoreapi.com/)
+
 ### What is Server and Client?
 
 - A server is a computer or system that provides resources, data, services, or programs to other computers, known as clients, over a network.
