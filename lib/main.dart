@@ -10,6 +10,8 @@ import 'package:flutter_rest_api/POST_API/login.dart';
 import 'package:flutter_rest_api/POST_API/sign_up.dart';
 import 'package:flutter_rest_api/POST_API/upload_image.dart';
 
+import 'category_api_screen.dart';
+
 void main(List<String> args) {
   runApp(MyApp());
 }
@@ -25,14 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple
       ),
-      // home: HomeScreen1(),
-      // home: HomeScreen2(),
-      // home: HomeScreen3(),
-      // home: HomeScreen4(),
-      // home: HomeScreen5(),
-      // home: SignUpScreen(),
-      // home: SignInScreen(),
-      home: UploadImageScreen(),
+      home: CategoryScreen(),
     );
   }
 }
