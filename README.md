@@ -6,6 +6,12 @@
 - [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
 - [Fetch data from the internet](https://docs.flutter.dev/cookbook/networking/fetch-data)
 
+
+## Screenshots
+<img src="./assets/get_api_screen1.png" width=200> <img src="./assets/get_api_screen2.png" width=200> <img src="./assets/get_api_screen3.png" width=200> 
+<img src="./assets/get_api_screen4.png" width=200><img src="./assets/get_api_screen4.png" width=200> <img src="./assets/post_sign_in_screen.png" width=200> 
+<img src="./assets/post_sign_up_screen.png" width=200> <img src="./assets/pos_api_upload_image.png" width=200> 
+
 ### What is Server and Client?
 
 - A server is a computer or system that provides resources, data, services, or programs to other computers, known as clients, over a network.
